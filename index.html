@@ -7,11 +7,37 @@
 </head>
 <body>
     <h1>Filmy do obejrzenia</h1>
-    <ul>
-        <li>Pierwsza pieśń z uwielbienia: <a href="https://1drv.ms/v/s!AmQvOcVSzUNUgcdrflIwz1tCO5igdw?e=OruQgh">VID_20240218_114850</a></li>
-        <li>Druga pieśń z uwielbienia: <a href="https://1drv.ms/v/s!AmQvOcVSzUNUgcdrflIwz1tCO5igdw?e=OruQgh">VID_20240218_114737</a></li>
-        <li>Trzecia pieśń z uwielbienia: <a href="https://1drv.ms/v/s!AmQvOcVSzUNUgcdrflIwz1tCO5igdw?e=OruQgh">VID_20240218_113908</a></li>
-        <li>Czwarta pieśń z uwielbienia: <a href="https://1drv.ms/v/s!AmQvOcVSzUNUgcdrflIwz1tCO5igdw?e=OruQgh">VID_20240218_114850</a></li>
+    <ul id="fileList">
+        <!-- Lista plików zostanie wygenerowana przez JavaScript -->
     </ul>
+
+    <script>
+        // Link do katalogu Miasto
+        const baseUrl = 'https://1drv.ms/u/s!AmQvOcVSzUNUgcdV0FIj7g8YtK_WKw?e=83AdY6';
+        // Nazwy plików MP4
+        const files = [
+            'VID_20240218_113908.mp4',
+            'VID_20240218_114737.mp4',
+            'VID_20240218_114850.mp4',
+            'VID_20240218_114850.mp4'
+        ];
+
+        // Funkcja generująca linki do plików MP4
+        function generateFileLinks() {
+            const fileList = document.getElementById('fileList');
+            files.forEach(file => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = `${baseUrl}/${file}`;
+                link.textContent = file;
+                link.target = '_blank';
+                listItem.appendChild(link);
+                fileList.appendChild(listItem);
+            });
+        }
+
+        // Generowanie linków po załadowaniu strony
+        document.addEventListener('DOMContentLoaded', generateFileLinks);
+    </script>
 </body>
 </html>
