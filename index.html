@@ -7,37 +7,12 @@
 </head>
 <body>
     <h1>Filmy do obejrzenia</h1>
-    <ul id="fileList">
-        <!-- Lista plików zostanie wygenerowana przez JavaScript -->
+    <ul>
+        <li>Pierwsza pieśń z uwielbienia: <a href="https://1drv.ms/v/s!AmQvOcVSzUNUgcdrflIwz1tCO5igdw?e=OruQgh">VID_20240218_114850.mp4</a></li>
+        <li>Druga pieśń z uwielbienia: <a href="https://1drv.ms/v/s!AmQvOcVSzUNUgcdtEwstPPs-W3xsYw?e=0pvFAt">VID_20240218_114850.mp4</a></li>
+        <li>Trzecia pieśń z uwielbienia: <a href="https://1drv.ms/v/s!AmQvOcVSzUNUgcdYstMNIJvuUEnanw?e=b08LH9">VID_20240218_114850.mp4</a></li>
+        <li>Kazanie o wybaczeniu z dnia 10.10.2022r.: <a href="https://www.youtube.com/watch?v=sxcXi9bOOo8">Otwórz</a></li>
+        <li>Kazanie o ojcostwie z dnia 20.06.2024r.: <a href="https://www.youtube.com/watch?v=5OiLJFSehvY">Otwórz</a></li>
     </ul>
-
-    <script>
-        // Link do katalogu Miasto
-        const baseUrl = 'https://1drv.ms/u/s!AmQvOcVSzUNUgcdV0FIj7g8YtK_WKw?e=83AdY6';
-        // Nazwy plików MP4
-        const files = [
-            'VID_20240218_113908.mp4',
-            'VID_20240218_114737.mp4',
-            'VID_20240218_114850.mp4',
-            'VID_20240218_114850.mp4'
-        ];
-
-        // Funkcja generująca linki do plików MP4
-        function generateFileLinks() {
-            const fileList = document.getElementById('fileList');
-            files.forEach(file => {
-                const listItem = document.createElement('li');
-                const link = document.createElement('a');
-                link.href = `${baseUrl}/${file}`;
-                link.textContent = file;
-                link.target = '_blank';
-                listItem.appendChild(link);
-                fileList.appendChild(listItem);
-            });
-        }
-
-        // Generowanie linków po załadowaniu strony
-        document.addEventListener('DOMContentLoaded', generateFileLinks);
-    </script>
 </body>
 </html>
